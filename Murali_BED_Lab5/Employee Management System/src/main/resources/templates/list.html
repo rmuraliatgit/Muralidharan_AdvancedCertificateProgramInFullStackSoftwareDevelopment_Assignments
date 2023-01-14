@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>List of Employees</title>
+</head>
+<div th:replace="header :: header"></div>
+<body>
+	<div th:replace="header :: navbar"></div>
+    <div class="container">
+        <div class="row">
+            <h1>List of Employees</h1>
+        </div>
+
+        <a href="/employees/new" class="btn btn-primary">Add Employee</a>
+        <br>
+        <table class="table table-striped table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="employee : ${employees}">
+                    <td th:text="${employee.id}"></td>
+                    <td th:text="${employee.firstName}"></td>
+                    <td th:text="${employee.lastName}"></td>
+                    <td th:text="${employee.email}"></td>
+                    <td>
+                        <a th:href="@{'/employees/edit/' + ${employee.id}}" class="btn btn-warning">Edit</a>
+                        <a th:href="@{'/employees/delete/' + ${employee.id}}" class="btn btn-danger" onClick="return confirm('Are you sure you want to delete this employee?');">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
