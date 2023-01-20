@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>List of Tickets</title>
+</head>
+<div th:replace="header :: header"></div>
+
+<body>
+	<div th:replace="header :: navbar"></div>
+	<div class="container">
+		<div class="row">
+			<h1>List of Tickets</h1>
+		</div>
+		<form th:action="@{/admin/tickets/search}" th:method="get">
+			<input type="text" name="query" placeholder="Search tickets">
+			<input type="submit" value="Search">
+		</form>
+		<br>
+		<table class="table table-striped table-hover table-bordered">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Ticket title</th>
+					<th>Ticket Short Description</th>
+					<th>Ticket Created On</th>
+					<th>Actions</th>
+				</tr>
+
+			</thead>
+			<tbody>
+				<tr th:each="ticket : ${tickets}">
+					<td th:text="${ticket.id}"></td>
+					<td th:text="${ticket.title}"></td>
+					<td th:text="${ticket.ticketShortDescription}"></td>
+					<td th:text="${ticket.ticketStartDate}"></td>
+
+					<td>
+						<a th:href="@{'/admin/tickets/' + ${ticket.id} +'/edit'}" class="btn btn-primary">Edit</a>
+						<a th:href="@{'/admin/tickets/' + ${ticket.id} +'/delete'}" class="btn btn-danger"
+							onClick="return confirm('Are you sure you want to delete this Ticket?');">Delete</a>
+						<a th:href="@{'/admin/tickets/' + ${ticket.id} +'/view'}" class="btn btn-info">View</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+
+</html>
