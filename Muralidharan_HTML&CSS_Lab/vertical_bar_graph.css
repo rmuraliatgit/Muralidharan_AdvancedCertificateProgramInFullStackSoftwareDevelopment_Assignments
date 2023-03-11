@@ -1,0 +1,84 @@
+#outer_div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    height: 500px;
+    width: 400px;
+    background-color: lightgray;
+    flex-direction: column;
+    margin-top: 15%;
+    margin-left: 35%;
+  }
+  
+  #heading {
+    position: absolute;
+    top: 25%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+    margin-top: 30%;
+    
+  }
+  
+  .graph-container {
+    width: 70px;
+    height: 300px;
+    border: 1px solid black;
+    background-color: #fff;
+    display: inline-block;
+    text-align: center;
+    margin: 0 20px;
+    position: relative;
+  }
+  
+  h1 {
+    margin-top: 310px;
+    font-size: 14px;
+    position: relative;
+    text-align: center;
+  }
+  
+  .bar {
+    width: 100%;
+    background-color: darkgray;
+    position: absolute;
+    bottom: 0;
+    height: 0;
+    animation-name: grow;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+  
+  .bar:nth-of-type(1) {
+    animation-delay: 0.2s;
+  }
+  
+  .bar:nth-of-type(2) {
+    animation-delay: 0.4s;
+  }
+  
+  .bar:nth-of-type(3) {
+    animation-delay: 0.6s;
+  }
+  
+  @keyframes grow {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: calc(var(--height) * 3px);
+    }
+  }
+  
+  #outer_div::after {
+    position: absolute;
+    bottom: -30px;
+    font-size: 20px;
+  }
+  
+  .graph-container h1::after {
+    font-size: 8px;
+    color: darkgray;
+  }

@@ -1,0 +1,67 @@
+body {
+    background-image: url('https://steamuserimages-a.akamaihd.net/ugc/1000305522026808961/99857941903875B783EF850F3340D732A9D30C90/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true');
+    background-size: cover;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.outer_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    background-color: transparent;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 15px;
+}
+
+input[type=text], input[type=email] {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 15px;
+    background-color: #dbd8df;
+    outline: none;
+    transition: all 0.3s ease;
+    font-size: 1.1em;
+}
+
+input[type=text]:focus, input[type=email]:focus {
+    background-color: lightgrey;
+    opacity: 0.5;
+}
+
+.buttons {
+    display: flex;
+    justify-content:space-around;
+    width: 100%;
+    margin-top: 20px;
+}
+
+button {
+    background-color: purple;
+    color: #d8beee;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover{
+    background-color: #7378c7;
+}
