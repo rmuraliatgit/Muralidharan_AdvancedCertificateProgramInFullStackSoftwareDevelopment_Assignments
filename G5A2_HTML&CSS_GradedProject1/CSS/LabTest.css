@@ -1,0 +1,104 @@
+
+.container{
+    max-width: 1100px;
+    height: 42%;
+    width: 90%;
+    margin: auto;
+    border: 2px solid whitesmoke;
+    overflow: auto;
+    position: absolute;
+    top: 15%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0px 0px 10px 0px rgb(0,0,0,0.413);
+
+}
+.patient-details{
+    display: flex;
+    margin-top: 20px;
+
+}
+.contact-img{
+    width: 50%;
+}
+
+.contact-img img{
+    display: block;
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+.contact-form{
+    width: 50%;
+    flex: 1;
+    margin: auto;
+    padding: 1rem;
+    position: relative;
+    overflow: auto;
+    /* overflow-y: scroll; */
+}
+
+.patient-details input{
+    display: block;
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 0.5rem 0;
+    outline: none;
+    margin-bottom: 2rem;
+}
+
+.patient-details .copy .input{
+    display: inline;
+    flex-shrink: 2;
+}
+.contact-details,
+.address-details,
+.test,
+.copy{
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.address-details .district{
+    flex: 1 2 400px;
+    margin-bottom: 20px;
+}
+
+.buttons input{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.datetime input{
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.button-container{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 600px;
+    margin-left: 370px;
+}
+
+.button-container button{
+    margin-right: 30px;
+    padding: 5px 10px;
+    outline: none;
+    background-color: rgb(241, 68, 241);
+    border: 1px solid whitesmoke;
+    color: white;
+}
+
+#submit:active{
+    background-color: #4D774E;
+}
+#reset:active{
+    background-color: #4D774E;
+}
